@@ -1,0 +1,62 @@
+/* 柱图组件样式 */
+.h5_component_bar{
+	font-family: "Microsoft YaHei"
+}
+/*所有散点图都具有的point类*/
+.h5_component_bar .rate{
+	height: 15px;
+	margin:-left:5px;
+	float: left;
+	position: relative;
+}
+
+.h5_component_bar .rate .bg{
+	background-color: #99c0ff;
+	height: 15px;
+	width: 0%;
+	border-radius: 2px;
+}
+.h5_component_bar .line{
+	height: 15px;
+	font-size: 12px;
+	line-height: 15px;
+	margin-bottom: 15px;
+}
+
+.h5_component_bar .name{
+	width: 60px;
+	float: left;
+	color:#000;
+	text-align: center;
+	margin-right: 5px;
+
+}
+
+.h5_component_bar .per{
+	width: 20px;
+	color: #99c0ff;
+	margin-left: 5px;
+	float: left;
+	-webkit-opacity:0;
+}
+
+
+.h5_component_bar_load .per{
+	-webkit-transition:all 1s 1s;
+	-webkit-opacity:1;
+}
+
+.h5_component_bar_leave .per{
+	-webkit-transition:all 1s 1s;
+	-webkit-opacity:0;
+}
+
+.h5_component_bar_leave .rate .bg{
+	-webkit-transition:all 1s .5s;
+	width: 0;
+}
+
+.h5_component_bar_load .rate .bg{
+	-webkit-transition:all 1s .5s;
+	width: 100%;
+}
