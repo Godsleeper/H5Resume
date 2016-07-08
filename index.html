@@ -193,12 +193,12 @@
                delay:300,
             })
         .addPage("description")
-            .addComponent("caption",{text:"核心理念",})//带图片的那个标题
+            .addComponent("caption",{text:"认识下我",})//带图片的那个标题
             .addComponent("text",{
         	width:500,
         	height:30,
         	center:true,
-        	text:"IT教育网=只学有用的",
+        	text:"我叫唐玮,前端爱好者",
         	css:{
         		opacity:0,
         		textAlign:'center',
@@ -214,6 +214,17 @@
         		top:240,
         	}
             })
+             .addComponent('msg',{
+                    text:'↑感谢女神的画像',
+                    css:{
+                        opacity:0,bottom:230,
+                        textAlign:'center',width:'100%',color:'#000',
+                        fontSize:'12px'
+                    },
+                    animateIn:{ opacity:1},
+                    animateOut:{ opacity:0},
+                    delay:1500
+                })
             .addComponent("description",{
         	center:true,
         	width:481,
@@ -226,43 +237,45 @@
         		fontSize:'15px',
         		lineHeight:'18px',
         		textAlign:'justify',
-        		top:340,
+        		bottom:"0px",
         	},
-        	text:'有上进心，自学能力强，能长时间静下心来学习与工作，懂得理论和实践相结合，喜欢设计于交互方面的工作，关心前沿技术，希望企业给我一个磨练自己的机会，我定会不断充实自己，为企业带来我的优势.',
+        	text:'个人评价：哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈.',
         	animateIn:{
         		opacity:1,
-        		top:200,
+                bottom:40,
         	},
         	animateOut:{
         		opacity:0,
-        		top:220,
+                bottom:0
         	},
-        	delay:500
+        	delay:1000
             })
-            .addComponent('peoples',{
-        	center:true,
-        	width:515,
-        	height:305,
-        	bg:'imgs/p1_people.png',
-        	css:{
-        		opacity:0,
-        		bottom:"0px"
-        	},
-        	delay:1000,
-        	animateIn:{
-        		opacity:1,
-        		bottom:40,
-        	},
-        	animateOut:{
-        		opacity:0,
-        		bottom:0
-        	}
+       
+        .addComponent('info',{
+            center:true,
+            height:437,
+            width:700,
+            bg:'imgs/photo.png',
+            css:{
+             opacity:0,
+             top:340,
+         },
+         delay:500,
+         animateIn:{
+             opacity:1,
+             top:'200px'
+         },
+         animateOut:{
+             opacity:0,
+             top:'400px'
+         }
+
         })
         .addPage('')
-        	.addComponent('caption',{text:'课程分布方向'})//折线图
+        	.addComponent('caption',{text:'个人技能树'})//折线图
             .addComponent('polyline',{
                     type:'polyline',
-                    data:[['前端开发',.8,'#ff7676'],['移动开发',.6],['后端开发',.4,'blue'],['图像处理',.1]],
+                    data:[['前端技能',.8,'#ff7676'],['数据结构',.6],['操作系统',.6,'blue'],['算法',.2]],
                     width:530,
                     height:300,
                     center:true,
@@ -271,7 +284,7 @@
                     animateOut:{opacity:0,top:100},
                 })
             .addComponent('msg',{
-                    text:'前端开发课程占到40%',
+                    text:'谁来拯救我的算法(┬＿┬)',
                     css:{
                         opacity:0,top:160,
                         textAlign:'center',width:'100%',color:'#ff7676',
@@ -281,14 +294,14 @@
                     animateOut:{ opacity:0}
                 })
         .addPage('')
-        	.addComponent('caption',{text:'移动开发课程'})//饼图
+        	.addComponent('caption',{text:'前端技能图'})//饼图
             .addComponent('pie',{
                     type:'pie',
                     data:[
-                        ['Android' , .4  ,'#ff7676'],
-                        ['IOS' , .3 ],
-                        ['Cocos2d-x' , .2  ],
-                        ['Unity-3D' , .1  ],
+                        ['Javascript' , .3  ,'#ff7676'],
+                        ['Html/Css' , .3 ],
+                        ['jQuery' , .3  ],
+                        ['框架' , .1  ],
                     ],
                     css:{top:200},
                     width:300,
@@ -296,16 +309,17 @@
                     center:true
                 })
              .addComponent('msg',{
-                    text:'移动课程 Android 占到40%',
+                    text:'原生狗表示还没用过框架',
                     css:{
                         opacity:0,bottom:120,
-                        textAlign:'center',width:'100%',color:'#ff7676'
+                        textAlign:'center',width:'100%',color:'#ff7676',
+                        fontSize:'25px'
                     },
                     animateIn:{ opacity:1},
                     animateOut:{ opacity:0}
                 })
         .addPage('')
-        	.addComponent('caption',{text:'前端开发课程'})//水平柱图/垂直柱图
+        	.addComponent('caption',{text:'专业基础课程'})//水平柱图/垂直柱图
             .addComponent('bar',
                             {
                                 type : 'bar',
@@ -313,13 +327,13 @@
                                 width : 530,
                                 height : 600,
                                 data:[
-                                    ['Javascript' , .4  ,'#ff7676'],
-                                    ['HTML/CSS' , .2  ],
-                                    ['CSS3' , .1 ],
-                                    ['HTML5' , .2  ],
-                                    ['jQuery' , .35 ],
-                                    ['Bootstrap' , .05 ],
-                                    ['AngularJs' , .09  ]
+                                    ['C++' , .7  ],
+                                    ['数据结构' , .8  ],
+                                    ['操作系统' , .8 ],
+                                    ['编译原理' , .9 ,'#ff7676' ],
+                                    ['数据库' , .8 ],
+                                    ['计算机网络' , .7 ],
+                                    ['计算机组成原理' , .6  ]
                                 ],
                                 css : {
                                     top:100,
@@ -337,7 +351,7 @@
                             }
                 )
             .addComponent('msg',{
-                    text:'前端课程 Javascript 占到40%',
+                    text:'感谢任男神让我及格T_T',
                     css:{
                         opacity:0,bottom:120,
                         textAlign:'center',width:'100%',color:'#ff7676'
@@ -346,18 +360,19 @@
                     animateOut:{ opacity:0}
                 })
         .addPage() //（bar_v）
-            .addComponent('caption',{text:'前端开发课程'})
+            .addComponent('caption',{text:'未来学习欲望清单'})
             .addComponent('bar',
                             {
                                 type : 'bar_v',
                                 width : 530,
                                 height : 400,
                                 data:[
-                                    ['Js' , .4  ,'#ff7676'],
-                                    ['CSS3' , .1 ],
-                                    ['HTML5' , .2  ],
-                                    ['PHP' , .05  ],
-                                    ['jQuery' , .35 ]
+                                    ['算法' , .8  ],
+                                    ['React' , .6 ],
+                                    ['NodeJS' , .9,'#ff7676'  ],
+                                    ['模块化编程' , .3  ],
+                                    ['自动化工具' , .5 ],
+                                    ['CSS Modules' , .4 ],
                                 ],
                                 css : {
                                     top:220,
@@ -375,7 +390,7 @@
                             }
                 )
                  .addComponent('msg',{
-                    text:'前端课程 Javascript 占到40%',
+                    text:'Node大法好啊，全栈没烦恼啊',
                     css:{
                         opacity:0,top:180,
                         textAlign:'center',width:'100%',color:'#ff7676'
@@ -384,17 +399,17 @@
                     animateOut:{ opacity:0}
                 })
         .addPage('')
-        	.addComponent('caption',{text:'后端开发课程'})//雷达图
+        	.addComponent('caption',{text:'我的英雄池'})//雷达图
             .addComponent('radar',{
                     type : 'radar',
                     width : 400,
                     height : 400,
                     data:[
-                        ['Js' , .9  ,'#ff7676'],
-                        ['CSS3' , .8 ],
-                        ['HTML5' , .7  ],
-                        ['PHP' , .6  ],
-                        ['jQuery' , .5 ]
+                        ['中单' , .3 ],
+                        ['打野' , .9  ,'#ff7676'],
+                        ['上单' , .1  ],
+                        ['辅助' , .9  ],
+                        ['ADC' , .7 ]
                     ],
                     css : {
                         top:100,
@@ -410,22 +425,34 @@
                     },
                     center : true,
                 })
+            .addComponent('msg',{
+                    text:'野辅上分，不送包赢(科科)',
+                    css:{
+                        opacity:0,bottom:160,
+                        textAlign:'center',width:'100%',color:'#ff7676',
+                        fontSize:'25px'
+                    },
+                    animateIn:{ opacity:1},
+                    animateOut:{ opacity:0},
+                    delay:1500
+                })
 
         .addPage('')
-        	.addComponent('caption',{text:'报名人数过万'})//环图
+        	.addComponent('caption',{text:'给自己打个分吧'})//环图
             .addComponent('ring-all',{
                     type : 'ring',center : true,
                     width : 300,height : 300,
-                    data:[['总课程' , .7  ,'#ff7676']],
+                    data:[['总分' , .7  ,'#ff7676']],
                     css : { top:120,opacity:0 ,fontSize:'30px'},
                     animateIn: { opacity:1},
                     animateOut:{ opacity:0},
                 })
             .addComponent('msg',{
-                    text:'不同课程报名人数超过一万占比',
+                    text:'想做肆意的极客',
                     css:{
                         opacity:0,top:300,
-                        textAlign:'center',width:'100%',color:'#ff7676'
+                        textAlign:'center',width:'100%',color:'#ff7676',
+                        fontSize:"25px"
                     },
                     animateIn:{ opacity:1},
                     animateOut:{ opacity:0},
@@ -434,7 +461,7 @@
             .addComponent('ring-1',{
                     type : 'ring',center : true,
                     width : 140,height : 140,
-                    data:[['前端开发' , .4  ,'darkorange']],
+                    data:[['努力' , .8  ,'darkorange']],
                     css : { left:30,bottom:110,opacity:0,fontSize:'12px' },
                     animateIn: { opacity:1},
                     animateOut:{ opacity:0},
@@ -442,7 +469,7 @@
             .addComponent('ring-2',{
                     type : 'ring',
                     width : 140,height : 140,
-                    data:[['后端开发' , .3  ,'darkorange']],
+                    data:[['天赋' , .3  ,'darkorange']],
                     css : { left:30,bottom:110,opacity:0,fontSize:'12px' },
                     animateIn: { opacity:1},
                     animateOut:{ opacity:0},
@@ -450,7 +477,7 @@
             .addComponent('ring-3',{
                     type : 'ring',
                     width : 140,height : 140,
-                    data:[['移动开发' , .2  ,'darkorange']],
+                    data:[['创意' , .6  ,'darkorange']],
                     css : { right:30,bottom:110,opacity:0,fontSize:'12px' },
                     animateIn: { opacity:1},
                     animateOut:{ opacity:0},
@@ -458,7 +485,7 @@
             .addComponent('ring-3',{
                     type : 'ring',
                     width : 140,height : 140,
-                    data:[['数据处理' , .1  ,'darkorange']],
+                    data:[['经验' , .1  ,'darkorange']],
                     css : { left:70,bottom:40,opacity:0,fontSize:'12px' },
                     animateIn: { opacity:1},
                     animateOut:{ opacity:0},
@@ -466,21 +493,21 @@
             .addComponent('ring-3',{
                     type : 'ring',
                     width : 140,height : 140,
-                    data:[['图像处理' , .1  ,'darkorange']],
+                    data:[['性格' , .6  ,'darkorange']],
                     css : { right:70,bottom:40,opacity:0,fontSize:'12px' },
                     animateIn: { opacity:1},
                     animateOut:{ opacity:0},
                 })
         .addPage('')
-        	.addComponent('caption',{text:'课程难度分布'})//散点图
+        	.addComponent('caption',{text:'三个关键字'})//散点图
             .addComponent('point',{
                 type : 'point',
                 width : 300,
                 height : 300,
                 data:[
-                    ['中级' , .4  ,'#ff7676'],
-                    ['初级' , .2  ,'#ffa3a4', 0 ,'-60%'],
-                    ['高级' , .3  ,'#99c1ff', '50%' ,'-120%']
+                    ['踏实' , .7  ,'#ff7676'],
+                    ['勤奋' , .6  ,'#ffa3a4', '-30%' ,'-80%'],
+                    ['友善' , .6  ,'#99c1ff', '50%' ,'-140%']
                 ],
                 css : {
                     bottom:'20%'

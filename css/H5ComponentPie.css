@@ -12,8 +12,9 @@
 
 .h5_component_pie .text{
     position: absolute;
-    z-index: 99;
+    z-index: 999;
     text-align: center;
     height: 24px;
     transition:all 1s;
+    font-weight: bold;
 }
