@@ -95,10 +95,8 @@ var H5=function(){
 		if(firstPage){
 			$.fn.fullpage.moveTo(firstPage);
 		}
-		this.loader==typeof H5_loading =='function'?H5_loading:this.loader;
-		return this;
 	}
-
+	this.loader==typeof H5_loading =='function'?H5_loading:this.loader;
 	return this;
 }
 
