@@ -24,11 +24,9 @@ var H5=function(){
 		if(typeof this.whenAddPage == 'function'){
 			this.whenAddPage();
 		}
-
-
-
 		return this;//链式调用因为每次都把当前的对象返回，this就是最大的dom元素，addpage在这个dom中进行操作
 	}
+
 
 	this.addComponent=function(name,cfg){
 		var cfg=cfg||{};
@@ -73,31 +71,12 @@ var H5=function(){
 			break;
 
 			default:
-
-
 		}
 		page.append(component)
 		return this;
 	}
 
-	this.loader=function(firstPage){
-		this.el.fullpage({
-			onLeave:function(index,nextIndex,direction){
-    				$(this).find(".h5_component").trigger("onLeave");
-    			},
-
-    		afterLoad:function(anchorLink,index){
-					$(this).find(".h5_component").trigger("onLoad");
-    			},
-    			scrollingSpeed:450
-		});
-		this.page[0].find(".h5_component").trigger("onLoad");
-		this.el.show();
-		if(firstPage){
-			$.fn.fullpage.moveTo(firstPage);
-		}
-	}
-	this.loader = typeof H5_loading == 'function' ? H5_loading : this.loader;
+	this.loader =  H5_loading;
     return this;
 }
 
