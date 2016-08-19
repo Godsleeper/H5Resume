@@ -88,7 +88,8 @@ var H5=function(){
 
     		afterLoad:function(anchorLink,index){
 					$(this).find(".h5_component").trigger("onLoad");
-    			}
+    			},
+    			scrollingSpeed:450
 		});
 		this.page[0].find(".h5_component").trigger("onLoad");
 		this.el.show();
