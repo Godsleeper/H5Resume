@@ -29,7 +29,7 @@ var H5_loading = function  (images,firstPage) {
             $('#rate').text(  ( ( this._loaded / this._images  *100) >> 0 ) + '%' );
 
             if(this._loaded < this._images){
-            return this;
+                return this;
             }
         }
 
