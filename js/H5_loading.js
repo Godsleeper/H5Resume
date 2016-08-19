@@ -1,7 +1,7 @@
 var H5_loading = function  (images,firstPage) {
         
         var id = this.id;
-
+        console.log(id);
         if(this._images === undefined ){ //  第一次进入
 
             this._images = ( images || [] ).length;
@@ -42,7 +42,8 @@ var H5_loading = function  (images,firstPage) {
             },
             afterLoad:function( anchorLink, index ) {
                 $(this).find('.h5_component').trigger('onLoad');
-            }
+            },
+            scrollingSpeed:450
         });
         this.page[0].find('.h5_component').trigger('onLoad');
         this.el.show();
