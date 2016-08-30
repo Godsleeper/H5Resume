@@ -107,8 +107,10 @@
          $(function(){
         var audio = document.getElementsByTagName("audio")[0];
         var source = document.getElementsByTagName("source")[0];
+
         source.onload=function(){
-            var music = $("<div class="music">").appendTo("body");
+            var music = $("<div class='music'>");
+            $("body").append(music);
         }
 
         $(".music").on("click",function(){
