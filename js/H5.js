@@ -5,7 +5,6 @@ var H5=function(){
 	$("body").append(this.el);
 	this.page=[];
 
-
 	this.addPage = function(name,text){
 		var page=$('<div class="h5_page section">');
 

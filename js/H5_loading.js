@@ -1,7 +1,6 @@
 var H5_loading = function  (images,firstPage) {
         
         var id = this.id;
-        console.log(id);
         if(this._images === undefined ){ //  第一次进入
 
             this._images = ( images || [] ).length;
@@ -39,15 +38,18 @@ var H5_loading = function  (images,firstPage) {
         this.el.fullpage({
             onLeave:function( index, nextIndex, direction) {
                 $(this).find('.h5_component').trigger('onLeave');
+                console.log($("body").attr('class'));
             },
             afterLoad:function( anchorLink, index ) {
                 $(this).find('.h5_component').trigger('onLoad');
             },
-            scrollingSpeed:450
+            scrollingSpeed:450,
+
         });
         this.page[0].find('.h5_component').trigger('onLoad');
         this.el.show();
+
         if(firstPage){
-            $.fn.fullpage.moveTo( firstPage );
+            $.fn.fullpage.moveTo(5);
         }
 }
