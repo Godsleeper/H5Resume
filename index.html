@@ -96,17 +96,23 @@
         <div id="rate">0%</div>
      </div>
 
-     <div class="music">
-          <audio id="musicitem" autoplay="true">
-                <source src="http://sc1.111ttt.com/2015/5/12/29/105291512598.mp3" preload="preload" type="audio/mpeg">
+    
+        <audio id="musicitem" autoplay="true">
+            <source src="http://sc1.111ttt.com/2015/5/12/29/105291512598.mp3" preload="preload" type="audio/mpeg">
         </audio>
-     </div>
+     
     
     <!-- 主要逻辑 -->
     <script type="text/javascript">
          $(function(){
+        var audio = document.getElementsByTagName("audio")[0];
+        var source = document.getElementsByTagName("source")[0];
+        source.onload=function(){
+            var music = $("<div class="music">").appendTo("body");
+        }
+
         $(".music").on("click",function(){
-            var audio = document.getElementsByTagName("audio")[0];
+            
             if($(this).css("animationPlayState")=='paused'){
                 $(this).css({
                     animationPlayState:"running"
