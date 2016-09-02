@@ -106,6 +106,7 @@
     <script type="text/javascript">
          $(function(){
         var audio = document.getElementsByTagName("audio")[0];
+
         $(".music").on("click",function(){
             
             if($(this).css("animationPlayState")=='paused'){
@@ -117,6 +118,7 @@
                 $(this).css({
                     animationPlayState:"paused"
                 })
+                
                 audio.pause();
             }     
         })
